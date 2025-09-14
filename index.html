@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burney Academy - Learn How to Start a Business</title>
+    <meta name="description" content="Learn how to start a business with expert guidance from Emmanuel and Niki Burney. Master business idea validation and market research with Burney Academy.">
+    <meta name="keywords" content="business education, entrepreneurship, start business, business validation, market research, Burney Management Group">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Burney Academy - Learn How to Start a Business">
+    <meta property="og:description" content="Learn how to start a business with expert guidance from Emmanuel and Niki Burney.">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/bmg-logo.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bmg-blue': '#2563eb',
+                        'bmg-purple': '#7c3aed',
+                        'bmg-dark': '#1e1b4b',
+                        'bmg-light': '#f8faff'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'playfair': ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-inter bg-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <img src="images/bmg-logo.png" alt="Burney Academy Logo" class="h-10 w-auto">
+                    <span class="ml-3 text-xl font-bold text-bmg-dark">Burney Academy</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-gray-700 hover:text-bmg-blue font-medium">Home</a>
+                        <a href="#course" class="nav-link text-gray-700 hover:text-bmg-blue font-medium">Course</a>
+                        <a href="#instructors" class="nav-link text-gray-700 hover:text-bmg-blue font-medium">Instructors</a>
+                        <a href="#pricing" class="nav-link text-gray-700 hover:text-bmg-blue font-medium">Pricing</a>
+                        <a href="#contact" class="nav-link text-gray-700 hover:text-bmg-blue font-medium">Contact</a>
+                    </div>
+                </div>
+                <button class="md:hidden" id="mobile-menu-btn">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="md:hidden" id="mobile-menu" style="display: none;">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-bmg-blue">Home</a>
+                <a href="#course" class="block px-3 py-2 text-gray-700 hover:text-bmg-blue">Course</a>
+                <a href="#instructors" class="block px-3 py-2 text-gray-700 hover:text-bmg-blue">Instructors</a>
+                <a href="#pricing" class="block px-3 py-2 text-gray-700 hover:text-bmg-blue">Pricing</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-bmg-blue">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-16 bg-gradient-to-br from-bmg-light via-blue-50 to-purple-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-6xl font-playfair font-bold text-bmg-dark mb-6">
+                    Master the Art of
+                    <span class="bg-gradient-to-r from-bmg-blue to-bmg-purple bg-clip-text text-transparent">
+                        Starting a Business
+                    </span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+                    Learn from experienced entrepreneurs Emmanuel and Niki Burney as they guide you through 
+                    the essential steps of business idea validation and market research.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                    <button class="enroll-btn bg-gradient-to-r from-bmg-blue to-bmg-purple text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                        Start Learning Today
+                    </button>
+                    <a href="#course" class="text-bmg-blue font-semibold hover:underline">
+                        Explore Course Details →
+                    </a>
+                </div>
+                
+                <!-- Trust Indicators -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-bmg-blue mb-2">Expert</div>
+                        <div class="text-gray-600">Instructors</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-bmg-purple mb-2">4.9/5</div>
+                        <div class="text-gray-600">Student Rating</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-bmg-blue mb-2">Real</div>
+                        <div class="text-gray-600">Business Experience</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Section -->
+    <section id="course" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-playfair font-bold text-bmg-dark mb-4">
+                    How to Start a Business
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    A comprehensive course designed to take you from business idea to validated concept, 
+                    with practical tools and frameworks used by successful entrepreneurs.
+                </p>
+            </div>
+
+            <div class="bg-gradient-to-br from-bmg-light to-blue-50 rounded-2xl p-8 mb-12">
+                <h3 class="text-2xl font-bold text-bmg-dark mb-6 text-center">
+                    Module 1: Business Idea Validation & Market Research
+                </h3>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Lesson 1 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-gradient-to-r from-bmg-blue to-bmg-purple text-white rounded-lg w-12 h-12 flex items-center justify-center font-bold text-lg">
+                                1
+                            </div>
+                            <h4 class="text-lg font-semibold text-bmg-dark ml-4">Business Idea Validation</h4>
+                        </div>
+                        <p class="text-gray-600">
+                            Learn proven frameworks to evaluate your business ideas and determine their viability 
+                            before investing time and resources.
+                        </p>
+                    </div>
+
+                    <!-- Lesson 2 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-gradient-to-r from-bmg-blue to-bmg-purple text-white rounded-lg w-12 h-12 flex items-center justify-center font-bold text-lg">
+                                2
+                            </div>
+                            <h4 class="text-lg font-semibold text-bmg-dark ml-4">Customer Discovery Interviews</h4>
+                        </div>
+                        <p class="text-gray-600">
+                            Master the art of conducting effective customer interviews to understand your target 
+                            market's needs, pain points, and buying behavior.
+                        </p>
+                    </div>
+
+                    <!-- Lesson 3 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-gradient-to-r from-bmg-blue to-bmg-purple text-white rounded-lg w-12 h-12 flex items-center justify-center font-bold text-lg">
+                                3
+                            </div>
+                            <h4 class="text-lg font-semibold text-bmg-dark ml-4">Market Research Deep Dive</h4>
+                        </div>
+                        <p class="text-gray-600">
+                            Discover advanced market research techniques to analyze competition, market size, 
+                            and identify untapped opportunities in your industry.
+                        </p>
+                    </div>
+
+                    <!-- Lesson 4 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-gradient-to-r from-bmg-blue to-bmg-purple text-white rounded-lg w-12 h-12 flex items-center justify-center font-bold text-lg">
+                                4
+                            </div>
+                            <h4 class="text-lg font-semibold text-bmg-dark ml-4">Validation Results Analysis</h4>
+                        </div>
+                        <p class="text-gray-600">
+                            Learn how to analyze and interpret your validation data to make informed decisions 
+                            about moving forward with your business concept.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Benefits -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-gradient-to-r from-bmg-blue to-bmg-purple text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-semibold text-bmg-dark mb-2">Proven Methods</h4>
+                    <p class="text-gray-600">Learn validation techniques used by successful entrepreneurs</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-gradient-to-r from-bmg-blue to-bmg-purple text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-semibold text-bmg-dark mb-2">Real Experience</h4>
+                    <p class="text-gray-600">Guidance from active business owners and entrepreneurs</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-gradient-to-r from-bmg-blue to-bmg-purple text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-semibold text-bmg-dark mb-2">Practical Tools</h4>
+                    <p class="text-gray-600">Templates and frameworks you can use immediately</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructors Section -->
+    <section id="instructors" class="py-20 bg-gradient-to-br from-bmg-light to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-playfair font-bold text-bmg-dark mb-4">
+                    Meet Your Instructors
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Learn from the co-founders of Burney Management Group, successful entrepreneurs 
+                    with real-world business experience.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Emmanuel Burney -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex items-center mb-6">
+                        <img src="images/emmanuel-burney.jpg" alt="Emmanuel Burney" class="w-24 h-24 rounded-full object-cover border-4 border-bmg-blue">
+                        <div class="ml-6">
+                            <h3 class="text-2xl font-bold text-bmg-dark">Emmanuel Burney</h3>
+                            <p class="text-bmg-blue font-semibold">Co-Founder & CEO</p>
+                            <p class="text-gray-600">Burney Management Group</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Emmanuel Burney is the Co-Founder and CEO of Burney Management Group, where he brings 
+                        visionary leadership and entrepreneurial expertise to drive business growth and innovation. 
+                        As a seasoned business owner and entrepreneur, Emmanuel has dedicated his career to helping 
+                        organizations optimize their operations and achieve sustainable success.
+                    </p>
+                    
+                    <p class="text-gray-700 leading-relaxed">
+                        With a passion for business development and strategic planning, Emmanuel has built Burney 
+                        Management Group into a comprehensive business solutions company that serves clients across 
+                        multiple industries. His hands-on approach to leadership and commitment to excellence has 
+                        established him as a trusted advisor to businesses seeking to scale their operations.
+                    </p>
+                </div>
+
+                <!-- Niki Burney -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex items-center mb-6">
+                        <img src="images/niki-burney.jpg" alt="Niki Burney" class="w-24 h-24 rounded-full object-cover border-4 border-bmg-purple">
+                        <div class="ml-6">
+                            <h3 class="text-2xl font-bold text-bmg-dark">Niki Burney</h3>
+                            <p class="text-bmg-purple font-semibold">Co-Founder & COO</p>
+                            <p class="text-gray-600">Burney Management Group</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Niki Burney serves as Co-Founder and Chief Operating Officer of Burney Management Group, 
+                        where she specializes in project management excellence and operational efficiency. As a 
+                        project management expert, Niki has been instrumental in driving successful project 
+                        outcomes and implementing streamlined processes that deliver measurable results for clients.
+                    </p>
+                    
+                    <p class="text-gray-700 leading-relaxed">
+                        With extensive experience in staffing solutions and virtual administrative services, 
+                        Niki has developed a comprehensive understanding of workforce optimization and remote 
+                        business operations. Her collaborative approach to business management and deep understanding 
+                        of project lifecycle management make her an invaluable contributor to business education.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Testimonial Section -->
+            <div class="mt-16 text-center">
+                <div class="bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
+                    <h3 class="text-2xl font-bold text-bmg-dark mb-8">What Students Say</h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="text-left">
+                            <div class="flex mb-4">
+                                <div class="flex text-yellow-400">
+                                    ★★★★★
+                                </div>
+                            </div>
+                            <p class="text-gray-700 italic mb-4">
+                                "The business validation framework taught by Emmanuel and Niki saved me months 
+                                of trial and error. I was able to validate my business idea and pivot before 
+                                making costly mistakes."
+                            </p>
+                            <div class="font-semibold text-bmg-dark">Sarah Martinez</div>
+                            <div class="text-gray-600 text-sm">Tech Entrepreneur</div>
+                        </div>
+                        
+                        <div class="text-left">
+                            <div class="flex mb-4">
+                                <div class="flex text-yellow-400">
+                                    ★★★★★
+                                </div>
+                            </div>
+                            <p class="text-gray-700 italic mb-4">
+                                "The customer discovery interview techniques are gold. I learned how to ask 
+                                the right questions and got insights that completely changed my business approach."
+                            </p>
+                            <div class="font-semibold text-bmg-dark">Michael Chen</div>
+                            <div class="text-gray-600 text-sm">Restaurant Owner</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-playfair font-bold text-bmg-dark mb-4">
+                    Choose Your Learning Path
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Select the option that best fits your learning style and business goals.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- One-Time Purchase -->
+                <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border-2 border-gray-200">
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-bmg-dark mb-2">Course Purchase</h3>
+                        <p class="text-gray-600 mb-6">One-time access to complete course</p>
+                        
+                        <div class="mb-6">
+                            <div class="text-4xl font-bold text-bmg-dark">$79</div>
+                            <div class="text-gray-600">per course</div>
+                        </div>
+
+                        <ul class="text-left space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Complete 4-lesson module
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Video content & materials
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Lifetime access
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Self-paced learning
+                            </li>
+                        </ul>
+
+                        <button class="enroll-btn w-full bg-gradient-to-r from-gray-600 to-gray-700 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                            Purchase Course
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Basic Access -->
+                <div class="bg-gradient-to-br from-blue-50 to-bmg-light rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border-2 border-bmg-blue">
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-bmg-dark mb-2">Basic Access</h3>
+                        <p class="text-gray-600 mb-6">Essential learning with monthly support</p>
+                        
+                        <div class="mb-6">
+                            <div class="flex items-center justify-center">
+                                <span class="text-2xl text-gray-500 line-through mr-2">$99</span>
+                                <span class="text-4xl font-bold text-bmg-blue">$67</span>
+                            </div>
+                            <div class="text-gray-600">per month</div>
+                            <div class="text-sm text-bmg-blue font-semibold">Promotional Price</div>
+                        </div>
+
+                        <ul class="text-left space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Complete 4-lesson course module
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Video content & materials
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Basic assignments
+                            </li>
+                        </ul>
+
+                        <button class="enroll-btn w-full bg-gradient-to-r from-bmg-blue to-blue-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                            Start Basic Plan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Premium Experience -->
+                <div class="bg-gradient-to-br from-purple-50 to-bmg-light rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border-2 border-bmg-purple relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-gradient-to-r from-bmg-purple to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                            Most Popular
+                        </span>
+                    </div>
+                    
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-bmg-dark mb-2">Premium Experience</h3>
+                        <p class="text-gray-600 mb-6">Enhanced learning with community access</p>
+                        
+                        <div class="mb-6">
+                            <div class="flex items-center justify-center">
+                                <span class="text-2xl text-gray-500 line-through mr-2">$199</span>
+                                <span class="text-4xl font-bold text-bmg-purple">$149</span>
+                            </div>
+                            <div class="text-gray-600">per month</div>
+                            <div class="text-sm text-bmg-purple font-semibold">Promotional Price</div>
+                        </div>
+
+                        <ul class="text-left space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Everything in Basic
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Direct instructor feedback
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Private community access
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Monthly live Q&A sessions
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Bonus resources & templates
+                            </li>
+                        </ul>
+
+                        <button class="enroll-btn w-full bg-gradient-to-r from-bmg-purple to-purple-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                            Start Premium Plan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Elite Mentorship -->
+                <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border-2 border-yellow-400">
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-bmg-dark mb-2">Elite Mentorship</h3>
+                        <p class="text-gray-600 mb-6">Premium mentoring with direct access</p>
+                        
+                        <div class="mb-6">
+                            <div class="flex items-center justify-center">
+                                <span class="text-2xl text-gray-500 line-through mr-2">$399</span>
+                                <span class="text-4xl font-bold text-yellow-600">$299</span>
+                            </div>
+                            <div class="text-gray-600">per month</div>
+                            <div class="text-sm text-yellow-600 font-semibold">Promotional Price</div>
+                        </div>
+
+                        <ul class="text-left space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Everything in Premium
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                1-on-1 mentoring sessions
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Direct access to Emmanuel & Niki
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Business plan review
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Priority email support
+                            </li>
+                        </ul>
+
+                        <button class="enroll-btn w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                            Start Elite Plan
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-bmg-light to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-playfair font-bold text-bmg-dark mb-4">
+                    Ready to Start Your Business Journey?
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Get in touch with us to learn more about our course or ask any questions 
+                    about starting your business.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-bmg-dark mb-6">Send Us a Message</h3>
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="first-name" class="block text-sm font-medium text-gray-700 mb-2">
+                                    First Name *
+                                </label>
+                                <input type="text" id="first-name" name="first-name" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bmg-blue focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="last-name" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Last Name *
+                                </label>
+                                <input type="text" id="last-name" name="last-name" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bmg-blue focus:border-transparent">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                                Email Address *
+                            </label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bmg-blue focus:border-transparent">
+                        </div>
+
+                        <div>
+                            <label for="business-stage" class="block text-sm font-medium text-gray-700 mb-2">
+                                Business Stage
+                            </label>
+                            <select id="business-stage" name="business-stage"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bmg-blue focus:border-transparent">
+                                <option value="">Select your current stage</option>
+                                <option value="idea">I have a business idea</option>
+                                <option value="validating">I'm validating my idea</option>
+                                <option value="starting">I'm starting my business</option>
+                                <option value="running">I have a running business</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
+                                Message
+                            </label>
+                            <textarea id="message" name="message" rows="4"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bmg-blue focus:border-transparent"
+                                placeholder="Tell us about your business goals or any questions you have..."></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-gradient-to-r from-bmg-blue to-bmg-purple text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Newsletter Signup -->
+                <div class="space-y-8">
+                    <!-- Newsletter -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold text-bmg-dark mb-4">Stay Updated</h3>
+                        <p class="text-gray-600 mb-6">
+                            Get the latest business tips, course updates, and entrepreneurship insights 
+                            delivered to your inbox.
+                        </p>
+                        
+                        <form id="newsletter-form" class="space-y-4">
+                            <input type="email" id="newsletter-email" name="email" required
+                                placeholder="Enter your email address"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-bmg-purple focus:border-transparent">
+                            
+                            <button type="submit"
+                                class="w-full bg-gradient-to-r from-bmg-purple to-purple-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                                Subscribe to Newsletter
+                            </button>
+                        </form>
+                        
+                        <p class="text-xs text-gray-500 mt-4">
+                            We respect your privacy. Unsubscribe at any time.
+                        </p>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="bg-gradient-to-br from-bmg-blue to-bmg-purple text-white rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold mb-6">Connect With Us</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <svg class="w-6 h-6 mr-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                </svg>
+                                <span>info@burneyacademy.com</span>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <svg class="w-6 h-6 mr-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Burney Management Group</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-8 border-t border-white/20">
+                            <p class="text-sm opacity-90">
+                                Ready to validate your business idea and build a successful company? 
+                                Join thousands of entrepreneurs who trust Burney Academy for their business education.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-bmg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="images/bmg-logo.png" alt="Burney Academy Logo" class="h-8 w-auto">
+                        <span class="ml-2 text-lg font-bold">Burney Academy</span>
+                    </div>
+                    <p class="text-gray-300">
+                        Empowering entrepreneurs with the knowledge and tools needed to build successful businesses.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#course" class="text-gray-300 hover:text-white transition-colors">Course Details</a></li>
+                        <li><a href="#instructors" class="text-gray-300 hover:text-white transition-colors">Instructors</a></li>
+                        <li><a href="#pricing" class="text-gray-300 hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Course Topics</h4>
+                    <ul class="space-y-2">
+                        <li><span class="text-gray-300">Business Idea Validation</span></li>
+                        <li><span class="text-gray-300">Customer Discovery</span></li>
+                        <li><span class="text-gray-300">Market Research</span></li>
+                        <li><span class="text-gray-300">Results Analysis</span></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Burney Management Group</h4>
+                    <p class="text-gray-300 mb-4">
+                        Professional business consulting and educational services.
+                    </p>
+                    <p class="text-sm text-gray-400">
+                        © Burney Management Group. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enrollment Modal -->
+    <div id="enrollment-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full">
+            <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold text-bmg-dark mb-2">Start Your Journey</h3>
+                <p class="text-gray-600">Choose your learning path and begin mastering business fundamentals today.</p>
+            </div>
+            
+            <div class="space-y-4 mb-6">
+                <button class="modal-plan-btn w-full p-4 border-2 border-gray-200 rounded-lg hover:border-bmg-blue transition-colors text-left" data-plan="course">
+                    <div class="font-semibold">Course Purchase - $79</div>
+                    <div class="text-sm text-gray-600">One-time access to complete course</div>
+                </button>
+                
+                <button class="modal-plan-btn w-full p-4 border-2 border-gray-200 rounded-lg hover:border-bmg-blue transition-colors text-left" data-plan="basic">
+                    <div class="font-semibold">Basic Access - $67/month</div>
+                    <div class="text-sm text-gray-600">Essential learning with monthly support</div>
+                </button>
+                
+                <button class="modal-plan-btn w-full p-4 border-2 border-bmg-purple rounded-lg hover:border-purple-600 transition-colors text-left" data-plan="premium">
+                    <div class="font-semibold">Premium Experience - $149/month</div>
+                    <div class="text-sm text-gray-600">Enhanced learning with community access</div>
+                    <div class="text-xs text-bmg-purple font-medium">Most Popular</div>
+                </button>
+                
+                <button class="modal-plan-btn w-full p-4 border-2 border-gray-200 rounded-lg hover:border-yellow-500 transition-colors text-left" data-plan="elite">
+                    <div class="font-semibold">Elite Mentorship - $299/month</div>
+                    <div class="text-sm text-gray-600">Premium mentoring with direct access</div>
+                </button>
+            </div>
+            
+            <div class="flex gap-4">
+                <button id="close-modal" class="flex-1 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">
+                    Close
+                </button>
+                <button id="contact-us" class="flex-1 px-4 py-2 bg-gradient-to-r from-bmg-blue to-bmg-purple text-white rounded-lg hover:shadow-lg">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full text-center">
+            <div class="text-green-500 mb-4">
+                <svg class="w-16 h-16 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-bmg-dark mb-2">Thank You!</h3>
+            <p class="text-gray-600 mb-6" id="success-message">Your message has been sent successfully. We'll get back to you soon!</p>
+            <button id="close-success-modal" class="px-6 py-2 bg-gradient-to-r from-bmg-blue to-bmg-purple text-white rounded-lg">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

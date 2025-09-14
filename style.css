@@ -1,0 +1,432 @@
+/* Custom CSS for Burney Academy */
+
+/* Root Variables */
+:root {
+    --bmg-blue: #2563eb;
+    --bmg-purple: #7c3aed;
+    --bmg-dark: #1e1b4b;
+    --bmg-light: #f8faff;
+    --text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    --card-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    --hover-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* Typography Enhancements */
+.font-playfair {
+    font-family: 'Playfair Display', serif;
+}
+
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Enhanced Gradient Backgrounds */
+.bg-gradient-to-br {
+    background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+/* Navigation Enhancements */
+nav {
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--bmg-blue), var(--bmg-purple));
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Hero Section Enhancements */
+#home {
+    background: linear-gradient(135deg, 
+        var(--bmg-light) 0%, 
+        rgba(219, 234, 254, 0.8) 35%, 
+        rgba(237, 233, 254, 0.8) 65%, 
+        var(--bmg-light) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.bg-clip-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Text Shadow for Better Readability */
+.text-shadow {
+    text-shadow: var(--text-shadow);
+}
+
+/* Enhanced Buttons */
+.enroll-btn {
+    background: linear-gradient(135deg, var(--bmg-blue) 0%, var(--bmg-purple) 100%);
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.enroll-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--hover-shadow);
+}
+
+.enroll-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.enroll-btn:hover::before {
+    left: 100%;
+}
+
+/* Card Enhancements */
+.card-shadow {
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+}
+
+.card-shadow:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+/* Course Module Styling */
+#course .bg-gradient-to-br {
+    background: linear-gradient(135deg, 
+        var(--bmg-light) 0%, 
+        rgba(219, 234, 254, 0.9) 100%);
+    border: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+/* Lesson Cards */
+.lesson-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.lesson-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--hover-shadow);
+}
+
+/* Instructor Profile Enhancements */
+#instructors .bg-white {
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+#instructors .bg-white:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--hover-shadow);
+}
+
+/* Profile Picture Styling */
+.instructor-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--bmg-blue);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+}
+
+/* Pricing Section Enhancements */
+#pricing .bg-gradient-to-br {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#pricing .bg-gradient-to-br:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+/* Pricing Card Specific Colors */
+.pricing-card-course {
+    border-color: #6b7280;
+}
+
+.pricing-card-basic {
+    border-color: var(--bmg-blue);
+}
+
+.pricing-card-premium {
+    border-color: var(--bmg-purple);
+}
+
+.pricing-card-elite {
+    border-color: #eab308;
+}
+
+/* Popular Badge */
+.popular-badge {
+    background: linear-gradient(135deg, var(--bmg-purple) 0%, #9333ea 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+}
+
+/* Form Styling */
+.form-input {
+    transition: all 0.3s ease;
+    border: 2px solid #e5e7eb;
+}
+
+.form-input:focus {
+    border-color: var(--bmg-blue);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    outline: none;
+}
+
+/* Modal Enhancements */
+#enrollment-modal .bg-white,
+#success-modal .bg-white {
+    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+    border-radius: 16px;
+}
+
+.modal-plan-btn {
+    transition: all 0.3s ease;
+}
+
+.modal-plan-btn:hover {
+    transform: translateX(5px);
+}
+
+/* Contact Section Styling */
+#contact .bg-gradient-to-br {
+    background: linear-gradient(135deg, 
+        var(--bmg-blue) 0%, 
+        var(--bmg-purple) 100%);
+    color: white;
+}
+
+#contact .bg-gradient-to-br * {
+    color: white;
+}
+
+/* Footer Enhancements */
+footer {
+    background: var(--bmg-dark);
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.6s ease;
+}
+
+.slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.6s ease;
+}
+
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Loading Animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.loading {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+    .instructor-photo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    #home {
+        padding-top: 80px;
+    }
+    
+    .lesson-card {
+        padding: 16px;
+    }
+    
+    #enrollment-modal .bg-white,
+    #success-modal .bg-white {
+        margin: 16px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .instructor-photo {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .text-5xl {
+        font-size: 2.5rem;
+    }
+    
+    .text-6xl {
+        font-size: 3rem;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .text-shadow {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    }
+    
+    .enroll-btn {
+        border: 2px solid white;
+    }
+}
+
+/* Accessibility Enhancements */
+.focus-visible:focus {
+    outline: 2px solid var(--bmg-blue);
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    nav,
+    #enrollment-modal,
+    #success-modal {
+        display: none !important;
+    }
+    
+    body {
+        color: black !important;
+        background: white !important;
+    }
+    
+    .bg-gradient-to-br {
+        background: white !important;
+        color: black !important;
+    }
+}
+
+/* Improved Text Contrast on Gradients */
+.gradient-text-shadow {
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.gradient-bg-text {
+    background: rgba(0,0,0,0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: white !important;
+}
+
+/* Logo Transparency Effect */
+.logo-transparent {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    background: transparent;
+}
+
+/* Enhanced Mobile Menu */
+#mobile-menu {
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.95);
+}
+
+/* Smooth Hover Transitions */
+* {
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Enhanced Focus States */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--bmg-blue);
+    outline-offset: 2px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--bmg-blue), var(--bmg-purple));
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, var(--bmg-purple), var(--bmg-blue));
+}
